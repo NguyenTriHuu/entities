@@ -10,6 +10,7 @@ package entities;
  */
 public class NhanVien {
     private int nv_maso;
+    private int q_maso;
     private String nv_hoten;
     private String nv_taikhoan;
     private String nv_matkhau;
@@ -23,8 +24,9 @@ public class NhanVien {
         
     }
 
-    public NhanVien(int nv_maso, String nv_hoten, String nv_taikhoan, String nv_matkhau, String nv_sdt, String nv_email, String nv_diachi, String nv_ngaysinh, String nv_ghichu) {
+    public NhanVien(int nv_maso, int q_maso, String nv_hoten, String nv_taikhoan, String nv_matkhau, String nv_sdt, String nv_email, String nv_diachi, String nv_ngaysinh, String nv_ghichu) {
         this.nv_maso = nv_maso;
+        this.q_maso = q_maso;
         this.nv_hoten = nv_hoten;
         this.nv_taikhoan = nv_taikhoan;
         this.nv_matkhau = nv_matkhau;
@@ -41,6 +43,14 @@ public class NhanVien {
 
     public void setNv_maso(int nv_maso) {
         this.nv_maso = nv_maso;
+    }
+
+    public int getQ_maso() {
+        return q_maso;
+    }
+
+    public void setQ_maso(int q_maso) {
+        this.q_maso = q_maso;
     }
 
     public String getNv_hoten() {
@@ -107,9 +117,6 @@ public class NhanVien {
         this.nv_ghichu = nv_ghichu;
     }
 
-    @Override
-    public String toString() {
-        return "NhanVien{" + "nv_maso=" + nv_maso + ", nv_hoten=" + nv_hoten + ", nv_taikhoan=" + nv_taikhoan + ", nv_matkhau=" + nv_matkhau + ", nv_sdt=" + nv_sdt + ", nv_email=" + nv_email + ", nv_diachi=" + nv_diachi + ", nv_ngaysinh=" + nv_ngaysinh + ", nv_ghichu=" + nv_ghichu + '}';
-    }
+   
     
 }

@@ -11,23 +11,24 @@ import java.io.Serializable;
  * @author user
  */
 public class HoaDon implements Serializable {
-   private static final long serialVersionUID = 1L;
-   private int hd_maso ;
-   private int nv_maso ;
-   private int lhd_maso ;
-   private int tt_maso ;
-   private String hd_ghichu ;
-   private String hd_tongtien ;
-   private String hd_ngaylap;
+
+    private static final long serialVersionUID = 1L;
+    private int hd_maso;
+    private int nv_maso;
+    private int kh_maso;
+    private int ltt_maso;
+    private String hd_ghichu;
+    private String hd_tongtien;
+    private String hd_ngaylap;
 
     public HoaDon() {
     }
 
-    public HoaDon(int hd_maso, int nv_maso, int lhd_maso, int tt_maso, String hd_ghichu, String hd_tongtien, String hd_ngaylap) {
+    public HoaDon(int hd_maso, int nv_maso, int kh_maso, int ltt_maso, String hd_ghichu, String hd_tongtien, String hd_ngaylap) {
         this.hd_maso = hd_maso;
         this.nv_maso = nv_maso;
-        this.lhd_maso = lhd_maso;
-        this.tt_maso = tt_maso;
+        this.kh_maso = kh_maso;
+        this.ltt_maso = ltt_maso;
         this.hd_ghichu = hd_ghichu;
         this.hd_tongtien = hd_tongtien;
         this.hd_ngaylap = hd_ngaylap;
@@ -49,20 +50,20 @@ public class HoaDon implements Serializable {
         this.nv_maso = nv_maso;
     }
 
-    public int getLhd_maso() {
-        return lhd_maso;
+    public int getKh_maso() {
+        return kh_maso;
     }
 
-    public void setLhd_maso(int lhd_maso) {
-        this.lhd_maso = lhd_maso;
+    public void setKh_maso(int kh_maso) {
+        this.kh_maso = kh_maso;
     }
 
-    public int getTt_maso() {
-        return tt_maso;
+    public int getLtt_maso() {
+        return ltt_maso;
     }
 
-    public void setTt_maso(int tt_maso) {
-        this.tt_maso = tt_maso;
+    public void setLtt_maso(int ltt_maso) {
+        this.ltt_maso = ltt_maso;
     }
 
     public String getHd_ghichu() {
@@ -89,7 +90,4 @@ public class HoaDon implements Serializable {
         this.hd_ngaylap = hd_ngaylap;
     }
 
-    
-
-    
 }

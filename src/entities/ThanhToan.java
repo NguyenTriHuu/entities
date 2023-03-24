@@ -8,37 +8,30 @@ package entities;
  *
  * @author user
  */
-public class ThanhToan {
-    private int tt_maso ;
-    private String tt_loai ;
+public abstract class ThanhToan {
 
-    public ThanhToan() {
+    private int maso;
+    private int hd_maso;
+
+    public ThanhToan(int maso, int hd_maso) {
+        this.maso = maso;
+        this.hd_maso = hd_maso;
     }
 
-    public ThanhToan(int tt_maso, String tt_loai) {
-        this.tt_maso = tt_maso;
-        this.tt_loai = tt_loai;
+    public int getMaso() {
+        return maso;
     }
 
-    public int getTt_maso() {
-        return tt_maso;
+    public void setMaso(int maso) {
+        this.maso = maso;
     }
 
-    public void setTt_maso(int tt_maso) {
-        this.tt_maso = tt_maso;
+    public int getHd_maso() {
+        return hd_maso;
     }
 
-    public String getTt_loai() {
-        return tt_loai;
+    public void setHd_maso(int hd_maso) {
+        this.hd_maso = hd_maso;
     }
 
-    public void setTt_loai(String tt_loai) {
-        this.tt_loai = tt_loai;
-    }
-
-    @Override
-    public String toString() {
-        return "ThanhToan{" + "tt_maso=" + tt_maso + ", tt_loai=" + tt_loai + '}';
-    }
-    
 }
