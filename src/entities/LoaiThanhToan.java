@@ -4,15 +4,21 @@
  */
 package entities;
 
+import java.io.Serializable;
+
 /**
  *
  * @author user
  */
-public class LoaiThanhToan {
+public class LoaiThanhToan implements Serializable {
 
     private int ltt_maso;
     private String ltt_ten;
 
+    public LoaiThanhToan() {
+    }
+
+    
     public LoaiThanhToan(int ltt_maso, String ltt_ten) {
         this.ltt_maso = ltt_maso;
         this.ltt_ten = ltt_ten;

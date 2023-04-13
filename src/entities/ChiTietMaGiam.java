@@ -4,36 +4,30 @@
  */
 package entities;
 
-import java.io.Serializable;
-
 /**
  *
  * @author user
  */
-public class ChiTietHoaDon implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-    private int hd_maso;
-    private String hh_maso;
+public class ChiTietMaGiam {
+    private int gghh_maso;
+    private String hh_maso ;
     private String hh_date;
-    private int soluong;
 
-    public ChiTietHoaDon() {
+    public ChiTietMaGiam() {
     }
 
-    public ChiTietHoaDon(int hd_maso, String hh_maso, String hh_date, int soluong) {
-        this.hd_maso = hd_maso;
+    public ChiTietMaGiam(int gghh_maso, String hh_maso, String hh_date) {
+        this.gghh_maso = gghh_maso;
         this.hh_maso = hh_maso;
         this.hh_date = hh_date;
-        this.soluong = soluong;
     }
 
-    public int getHd_maso() {
-        return hd_maso;
+    public int getGghh_maso() {
+        return gghh_maso;
     }
 
-    public void setHd_maso(int hd_maso) {
-        this.hd_maso = hd_maso;
+    public void setGghh_maso(int gghh_maso) {
+        this.gghh_maso = gghh_maso;
     }
 
     public String getHh_maso() {
@@ -51,13 +45,6 @@ public class ChiTietHoaDon implements Serializable {
     public void setHh_date(String hh_date) {
         this.hh_date = hh_date;
     }
-
-    public int getSoluong() {
-        return soluong;
-    }
-
-    public void setSoluong(int soluong) {
-        this.soluong = soluong;
-    }
-
+    
+    
 }

@@ -8,22 +8,29 @@ package entities;
  *
  * @author user
  */
-public abstract class ThanhToan {
+public class ThanhToan {
 
-    private int maso;
+    private int tt_maso;
     private int hd_maso;
+    private String tt_ngaythanhtoan;
+    private boolean tt_trangthai;
 
-    public ThanhToan(int maso, int hd_maso) {
-        this.maso = maso;
+    public ThanhToan() {
+    }
+
+    public ThanhToan(int tt_maso, int hd_maso, String tt_ngaythanhtoan, boolean tt_trangthai) {
+        this.tt_maso = tt_maso;
         this.hd_maso = hd_maso;
+        this.tt_ngaythanhtoan = tt_ngaythanhtoan;
+        this.tt_trangthai = tt_trangthai;
     }
 
-    public int getMaso() {
-        return maso;
+    public int getTt_maso() {
+        return tt_maso;
     }
 
-    public void setMaso(int maso) {
-        this.maso = maso;
+    public void setTt_maso(int tt_maso) {
+        this.tt_maso = tt_maso;
     }
 
     public int getHd_maso() {
@@ -34,4 +41,21 @@ public abstract class ThanhToan {
         this.hd_maso = hd_maso;
     }
 
+    public String getTt_ngaythanhtoan() {
+        return tt_ngaythanhtoan;
+    }
+
+    public void setTt_ngaythanhtoan(String tt_ngaythanhtoan) {
+        this.tt_ngaythanhtoan = tt_ngaythanhtoan;
+    }
+
+    public boolean isTt_trangthai() {
+        return tt_trangthai;
+    }
+
+    public void setTt_trangthai(boolean tt_trangthai) {
+        this.tt_trangthai = tt_trangthai;
+    }
+
+   
 }

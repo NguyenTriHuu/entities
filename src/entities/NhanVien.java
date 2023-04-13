@@ -4,27 +4,30 @@
  */
 package entities;
 
+import java.io.Serializable;
+
 /**
  *
  * @author user
  */
-public class NhanVien {
+public class NhanVien implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private int nv_maso;
     private int q_maso;
     private String nv_hoten;
     private String nv_taikhoan;
     private String nv_matkhau;
-    private String nv_sdt ;
-    private String nv_email ;
-    private String nv_diachi ;
-    private String nv_ngaysinh ;
-    private String nv_ghichu ;
-    
-    public NhanVien(){
-        
+    private String nv_sdt;
+    private String nv_email;
+    private String nv_diachi;
+    private String nv_ngaysinh;
+
+    public NhanVien() {
+
     }
 
-    public NhanVien(int nv_maso, int q_maso, String nv_hoten, String nv_taikhoan, String nv_matkhau, String nv_sdt, String nv_email, String nv_diachi, String nv_ngaysinh, String nv_ghichu) {
+    public NhanVien(int nv_maso, int q_maso, String nv_hoten, String nv_taikhoan, String nv_matkhau, String nv_sdt, String nv_email, String nv_diachi, String nv_ngaysinh) {
         this.nv_maso = nv_maso;
         this.q_maso = q_maso;
         this.nv_hoten = nv_hoten;
@@ -34,7 +37,6 @@ public class NhanVien {
         this.nv_email = nv_email;
         this.nv_diachi = nv_diachi;
         this.nv_ngaysinh = nv_ngaysinh;
-        this.nv_ghichu = nv_ghichu;
     }
 
     public int getNv_maso() {
@@ -109,14 +111,4 @@ public class NhanVien {
         this.nv_ngaysinh = nv_ngaysinh;
     }
 
-    public String getNv_ghichu() {
-        return nv_ghichu;
-    }
-
-    public void setNv_ghichu(String nv_ghichu) {
-        this.nv_ghichu = nv_ghichu;
-    }
-
-   
-    
 }

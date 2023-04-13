@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package entities;
 
 import java.io.Serializable;
@@ -20,11 +17,13 @@ public class HoaDon implements Serializable {
     private String hd_ghichu;
     private String hd_tongtien;
     private String hd_ngaylap;
+    private String hd_tongtienchietkhau;
+    private boolean hd_tinhtrangthanhtoan;
 
     public HoaDon() {
     }
 
-    public HoaDon(int hd_maso, int nv_maso, int kh_maso, int ltt_maso, String hd_ghichu, String hd_tongtien, String hd_ngaylap) {
+    public HoaDon(int hd_maso, int nv_maso, int kh_maso, int ltt_maso, String hd_ghichu, String hd_tongtien, String hd_ngaylap, String hd_tongtienchietkhau, boolean hd_tinhtrangthanhtoan) {
         this.hd_maso = hd_maso;
         this.nv_maso = nv_maso;
         this.kh_maso = kh_maso;
@@ -32,7 +31,11 @@ public class HoaDon implements Serializable {
         this.hd_ghichu = hd_ghichu;
         this.hd_tongtien = hd_tongtien;
         this.hd_ngaylap = hd_ngaylap;
+        this.hd_tongtienchietkhau = hd_tongtienchietkhau;
+        this.hd_tinhtrangthanhtoan = hd_tinhtrangthanhtoan;
     }
+
+   
 
     public int getHd_maso() {
         return hd_maso;
@@ -90,4 +93,29 @@ public class HoaDon implements Serializable {
         this.hd_ngaylap = hd_ngaylap;
     }
 
+    public String getHd_tongtienchietkhau() {
+        return hd_tongtienchietkhau;
+    }
+
+    public void setHd_tongtienchietkhau(String hd_tongtienchietkhau) {
+        this.hd_tongtienchietkhau = hd_tongtienchietkhau;
+    }
+
+    public boolean isHd_tinhtrangthanhtoan() {
+        return hd_tinhtrangthanhtoan;
+    }
+
+    public void setHd_tinhtrangthanhtoan(boolean hd_tinhtrangthanhtoan) {
+        this.hd_tinhtrangthanhtoan = hd_tinhtrangthanhtoan;
+    }
+
+    @Override
+    public String toString() {
+        return "HoaDon{" + "hd_maso=" + hd_maso + ", nv_maso=" + nv_maso + ", kh_maso=" + kh_maso + ", ltt_maso=" + ltt_maso + ", hd_ghichu=" + hd_ghichu + ", hd_tongtien=" + hd_tongtien + ", hd_ngaylap=" + hd_ngaylap + ", hd_tongtienchietkhau=" + hd_tongtienchietkhau + ", hd_tinhtrangthanhtoan=" + hd_tinhtrangthanhtoan + '}';
+    }
+    
+
+    
+
+    
 }

@@ -4,22 +4,30 @@
  */
 package entities;
 
+import java.io.Serializable;
+
 /**
  *
  * @author user
  */
-public class KhachHang {
+public class KhachHang implements Serializable {
 
     private int kh_maso;
     private String kh_ten;
     private String kh_sdt;
-    private float kh_diem;
+    private int kh_diem;
+    private int lkh_maso;
 
-    public KhachHang(int kh_maso, String kh_ten, String kh_sdt, float kh_diem) {
+    public KhachHang() {
+
+    }
+
+    public KhachHang(int kh_maso, String kh_ten, String kh_sdt, int kh_diem, int lkh_maso) {
         this.kh_maso = kh_maso;
         this.kh_ten = kh_ten;
         this.kh_sdt = kh_sdt;
         this.kh_diem = kh_diem;
+        this.lkh_maso = lkh_maso;
     }
 
     public int getKh_maso() {
@@ -46,12 +54,20 @@ public class KhachHang {
         this.kh_sdt = kh_sdt;
     }
 
-    public float getKh_diem() {
+    public int getKh_diem() {
         return kh_diem;
     }
 
-    public void setKh_diem(float kh_diem) {
+    public void setKh_diem(int kh_diem) {
         this.kh_diem = kh_diem;
+    }
+
+    public int getLkh_maso() {
+        return lkh_maso;
+    }
+
+    public void setLkh_maso(int lkh_maso) {
+        this.lkh_maso = lkh_maso;
     }
 
 }

@@ -4,8 +4,8 @@
  */
 package entities;
 
+import com.businessrefinery.barcode.Barcode;
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  *
@@ -15,15 +15,18 @@ public class HangHoa implements Serializable {
     private String hh_maso;
     private int lhh_maso;
     private int th_maso ;
-    private Date hh_date;
+    private String hh_date;
     private String hh_tenhang ;
     private String hh_giaban ;
     private String hh_hinhanh ;
+    private String hh_barcode;
+    private float hh_trongluong;
+    private int dvt_maso;
 
     public HangHoa() {
     }
 
-    public HangHoa(String hh_maso, int lhh_maso, int th_maso, Date hh_date, String hh_tenhang, String hh_giaban, String hh_hinhanh) {
+    public HangHoa(String hh_maso, int lhh_maso, int th_maso, String hh_date, String hh_tenhang, String hh_giaban, String hh_hinhanh, String hh_barcode, float hh_trongluong, int dvt_maso) {
         this.hh_maso = hh_maso;
         this.lhh_maso = lhh_maso;
         this.th_maso = th_maso;
@@ -31,6 +34,9 @@ public class HangHoa implements Serializable {
         this.hh_tenhang = hh_tenhang;
         this.hh_giaban = hh_giaban;
         this.hh_hinhanh = hh_hinhanh;
+        this.hh_barcode = hh_barcode;
+        this.hh_trongluong = hh_trongluong;
+        this.dvt_maso = dvt_maso;
     }
 
     public String getHh_maso() {
@@ -57,11 +63,11 @@ public class HangHoa implements Serializable {
         this.th_maso = th_maso;
     }
 
-    public Date getHh_date() {
+    public String getHh_date() {
         return hh_date;
     }
 
-    public void setHh_date(Date hh_date) {
+    public void setHh_date(String hh_date) {
         this.hh_date = hh_date;
     }
 
@@ -89,5 +95,36 @@ public class HangHoa implements Serializable {
         this.hh_hinhanh = hh_hinhanh;
     }
 
-    
+    public String getHh_barcode() {
+        return hh_barcode;
+    }
+
+    public void setHh_barcode(String hh_barcode) {
+        this.hh_barcode = hh_barcode;
+    }
+
+    public float getHh_trongluong() {
+        return hh_trongluong;
+    }
+
+    public void setHh_trongluong(float hh_trongluong) {
+        this.hh_trongluong = hh_trongluong;
+    }
+
+    public int getDvt_maso() {
+        return dvt_maso;
+    }
+
+    public void setDvt_maso(int dvt_maso) {
+        this.dvt_maso = dvt_maso;
+    }
+
+   
+
+    public void GenBarcode() throws Exception{
+        Barcode barcode = new Barcode();
+        barcode.setSymbology(Barcode.EAN13);
+        barcode.setCode(hh_maso);
+        barcode.drawImage2File("C:\\LearningCode\\Java\\Barcode\\java-ean13-"+hh_tenhang+".gif");
+    }
 }

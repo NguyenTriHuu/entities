@@ -10,60 +10,53 @@ import java.util.Date;
  *
  * @author user
  */
-public abstract class GiamGia {
+public class GiamGia {
 
-    private int maso;
-    private String ten;
-    private float giatri;
-    private String ngaybd;
-    private String ngaykt;
+    private int gghh_maso;
+    private String gghh_ngaybd;
+    private String gghh_ngaykt;
+    private int gghh_phantram;
 
-    public GiamGia(int maso, String ten, float giatri, String ngaybd, String ngaykt) {
-        this.maso = maso;
-        this.ten = ten;
-        this.giatri = giatri;
-        this.ngaybd = ngaybd;
-        this.ngaykt = ngaykt;
+    public GiamGia() {
     }
 
-    public int getMaso() {
-        return maso;
+    public GiamGia(int gghh_maso, String gghh_ngaybd, String gghh_ngaykt, int gghh_phantram) {
+        this.gghh_maso = gghh_maso;
+        this.gghh_ngaybd = gghh_ngaybd;
+        this.gghh_ngaykt = gghh_ngaykt;
+        this.gghh_phantram = gghh_phantram;
     }
 
-    public void setMaso(int maso) {
-        this.maso = maso;
+    public int getGghh_maso() {
+        return gghh_maso;
     }
 
-    public String getTen() {
-        return ten;
+    public void setGghh_maso(int gghh_maso) {
+        this.gghh_maso = gghh_maso;
     }
 
-    public void setTen(String ten) {
-        this.ten = ten;
+    public String getGghh_ngaybd() {
+        return gghh_ngaybd;
     }
 
-    public float getGiatri() {
-        return giatri;
+    public void setGghh_ngaybd(String gghh_ngaybd) {
+        this.gghh_ngaybd = gghh_ngaybd;
     }
 
-    public void setGiatri(float giatri) {
-        this.giatri = giatri;
+    public String getGghh_ngaykt() {
+        return gghh_ngaykt;
     }
 
-    public String getNgaybd() {
-        return ngaybd;
+    public void setGghh_ngaykt(String gghh_ngaykt) {
+        this.gghh_ngaykt = gghh_ngaykt;
     }
 
-    public void setNgaybd(String ngaybd) {
-        this.ngaybd = ngaybd;
+    public int getGghh_phantram() {
+        return gghh_phantram;
     }
 
-    public String getNgaykt() {
-        return ngaykt;
-    }
-
-    public void setNgaykt(String ngaykt) {
-        this.ngaykt = ngaykt;
+    public void setGghh_phantram(int gghh_phantram) {
+        this.gghh_phantram = gghh_phantram;
     }
 
 }
