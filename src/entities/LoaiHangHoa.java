@@ -4,11 +4,13 @@
  */
 package entities;
 
+import java.io.Serializable;
+
 /**
  *
  * @author user
  */
-public class LoaiHangHoa {
+public class LoaiHangHoa implements Serializable {
 
     private int lhh_maso;
     private String lhh_ten;

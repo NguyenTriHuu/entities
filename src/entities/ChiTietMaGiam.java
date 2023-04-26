@@ -4,11 +4,13 @@
  */
 package entities;
 
+import java.io.Serializable;
+
 /**
  *
  * @author user
  */
-public class ChiTietMaGiam {
+public class ChiTietMaGiam implements Serializable {
     private int gghh_maso;
     private String hh_maso ;
     private String hh_date;

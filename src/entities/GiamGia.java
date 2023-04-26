@@ -4,13 +4,13 @@
  */
 package entities;
 
-import java.util.Date;
+import java.io.Serializable;
 
 /**
  *
  * @author user
  */
-public class GiamGia {
+public class GiamGia implements Serializable{
 
     private int gghh_maso;
     private String gghh_ngaybd;
